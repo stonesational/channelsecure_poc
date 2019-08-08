@@ -1,0 +1,14 @@
+<aura:component implements="lightning:isUrlAddressable">
+    <aura:attribute name="isInit" type="Boolean" default="false" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:if isTrue="{!v.isInit}">
+        <iframe src="www.google.com" />
+    </aura:if> 
+    
+    
+    <div class="c-container">
+        <lightning:button variant="brand" label="Test" onclick="{!c.doInit}" />
+    </div>
+</aura:component>	
