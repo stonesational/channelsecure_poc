@@ -1,17 +1,13 @@
 <!--
-Description:    Contains a button to test a Browser Based REST call via XHR to a simulated DBS application hosted on Heroku.
+Description:    Contains a button to test an image load from a simulated DBS application hosted on Heroku.
                 Purpose:
                 1) Ensure SSO is in place via Channel Secure
                 2) Determine if DBS is up/running
-                3) Bonus/Nice to have: Determine if DBS is healthy.
                 
 Attributes:     isInit – Use to only load the VF Proxy Canvas app once SSO is established and DBS is determined to be available.
                 
 Event Handlers: None
 
-Important Note: Applications must trust each other. 
-                1) CRV needs a CPS entry with DBS's host name
-                2) CPS needs a CORS entry with CRV's host name
 -->
 <aura:component implements="lightning:isUrlAddressable">
     <aura:attribute name="isInit" type="Boolean" default="false" />
@@ -22,6 +18,6 @@ Important Note: Applications must trust each other.
     </aura:if> 
     
     <div class="c-container">
-        <lightning:button variant="destructive" label="Healthcheck Status (REST Service) " onclick="{!c.healthcheck_service}" />
+        <lightning:button variant="destructive" label="Healthcheck Status (Image Load) " onclick="{!c.image_load}" />
     </div>
 </aura:component>	
