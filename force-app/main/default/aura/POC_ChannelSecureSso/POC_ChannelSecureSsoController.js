@@ -29,8 +29,8 @@
                     var toastEvent = $A.get("e.force:showToast");
                     toastEvent.setParams({
                         mode: 'sticky',
-                        title: 'DBS Error',
-                        message: 'DBS is available but having internal problems. Details: '+ responseBody.status,
+                        title: 'PinPad Error',
+                        message: 'DBS is available but having internal problems. Details: ' + responseBody.status,
                         type: 'error',
                     });
                     toastEvent.fire();
@@ -42,8 +42,8 @@
                 var toastEvent = $A.get("e.force:showToast");
                 toastEvent.setParams({
                     mode: 'sticky',
-                    title: 'DBS Error',
-                    message: 'DBS is not available. Response Code: '+ this.status + ' : ' + this.statusText,
+                    title: 'PinPad Error',
+                    message: 'DBS is unavailable. Response Code: ' + this.status + ' - Details: ' + this.statusText,
                     type: 'error',
                 });
                 toastEvent.fire();

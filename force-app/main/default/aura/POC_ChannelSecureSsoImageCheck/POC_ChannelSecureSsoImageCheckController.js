@@ -19,7 +19,7 @@
             var toastEvent = $A.get("e.force:showToast");
             toastEvent.setParams({
                 mode: 'sticky',
-                title: 'DBS Error',
+                title: 'PinPad Error',
                 message: 'DBS is unavailable',
                 type: 'error',
             });
