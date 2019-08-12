@@ -26,7 +26,7 @@
             toastEvent.fire();
         }
         
-        img.src = 'https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.pngasdF';
+        img.src = 'https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png';
 
     }
 })
