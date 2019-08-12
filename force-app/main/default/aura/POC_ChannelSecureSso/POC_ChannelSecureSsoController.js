@@ -17,13 +17,12 @@
 		request.send();
 		request.onreadystatechange = function(){
 
-            
             if (this.readyState == 4 && this.status == 200) {   //DBS is up
                 
                 let responseBody = JSON.parse(this.responseText);
                 
-                if(responseBody.status === "OK"){                //DBS is functioning
-                    component.set("v.isInit", true);
+                if(responseBody.status === "OK"){               //DBS is up and functioning
+                    component.set("v.isInit", true);            //Load Canvas app
                 }
 
                 else {                                          //DBS is having internal problems
@@ -36,7 +35,6 @@
                     });
                     toastEvent.fire();
                 }
-
                 
 
             } else if (this.readyState == 4 && this.status != 200) { //DBS is down
