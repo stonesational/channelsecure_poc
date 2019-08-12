@@ -1,4 +1,3 @@
-({
     /*
     Description:The following example uses XHR to call a a REST Service hosted on DBS.
                 The REST service was arbitrarily called /healthcheck/status. 
@@ -9,6 +8,7 @@
 
     XHR Ref:    https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
     */
+({
     healthcheck_service : function(component, event, helper) {
         
         var request = new XMLHttpRequest();
